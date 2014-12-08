@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="twitter:title" content="Pourquoi les traders ne sont-ils plus (seulement) des traders ?">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@letemps">
+    <meta name="twitter:description" content="L'explication : pourquoi les traders ne sont-ils plus (seulement) des traders ?">
+
+    <meta name="twitter:image" content="http://www.letemps.ch/interactive/2014/traders/share.jpg" />
+
+
+    <meta property="og:title" content="L'explication : pourquoi les traders ne sont-ils plus (seulement) des traders ?" />
+    <meta property="og:site_name" content="Le Temps" />
+    <meta name="og:image" content="http://www.letemps.ch/interactive/2014/traders/img/share.jpg" />
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.letemps.ch/interactive/2014/traders/">
+
+
+
+    <link href="css/app.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <link rel="stylesheet" href="css/makeitresponsive.css">
+    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
+    <link rel="stylesheet" href="css/light-theme.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+    <style type="text/css">
+    #container {
+        height: 600px;
+        min-width: 310px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    #container1 {
+        height: 600px;
+        min-width: 310px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    #container2 {
+        height: 500px;
+        min-width: 310px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+    }
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+    .alabama {
+        font-size: 14px;
+    }
+    </style>
+    <style type="text/css">
+    /* base styles */
+    
+    html {
+        -webkit-text-size-adjust: none;
+    }
+    body {
+        font: 12px/1.4 Georgia;
+        color: #333;
+        margin-left: 1%;
+        margin-right: 1%;
+        overflow-x: hidden;
+    }
+    h2 {
+        font-weight: normal;
+        color: #666;
+        font-size: 12px;
+        margin: 0 0 22px 0;
+    }
+    table {
+        border-collapse: collapse;
+        padding: 0;
+        margin: 0 0 11px 0;
+        width: 100%;
+    }
+    table th {
+        text-align: left;
+        border-bottom: 2px solid #eee;
+        vertical-align: bottom;
+    }
+    table th.share {
+        border-bottom: 0;
+        text-align: center;
+        padding: 0;
+    }
+    .alabama {
+        width: 30%
+    }
+    table td {
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+    }
+    table th,
+    table td {
+        padding: 3px;
+        color: #333;
+        text-align: center;
+    }
+    table th:first-child,
+    table td:first-child {
+        text-align: right;
+    }
+    table tr.united-states {
+        font-weight: bold;
+        background-color: #f1f1f1;
+    }
+    .above-avg {
+        background-color: #b8cae2;
+        border: 1px solid #fff;
+    }
+    .above-avg1 {
+        background-color: #ed9b7c;
+        border: 1px solid #fff;
+        border-top: 1px;
+    }
+    .rien {
+        background-color: #d9d9d9;
+        border: 1px solid #fff;
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+<nav>
+    <a href="http://www.letemps.ch/">
+        <img src="http://www.letemps.ch/rw/SysConfig/WebPortal/letemps/image/logo/logo_header.jpg" class="logo" />
+    </a>
+    <ul>
+        <li id="bonw-title" style="color:#555555;">
+        </li>
+
+        <li class="company-ranking">
+            <a href="#ranked-7">
+                <sup></sup>
+            </a>
+        </li>
+
+    </ul>
+    <a class="share-button"></a>
+</nav>
+<div class="row" style="padding-top:80px;">
+
+    <div class="col span12">
+        <p style="margin-top:0px;text-transform:uppercase;"><span style="color:#fff;padding:5px 10px 5px 10px;background-color:#940026" ;>Matières premières</p>
+        <h1 style="line-height:130%;width:100%"><big>Pourquoi les traders ne sont-ils plus (seulement) des traders?</big></h1><br>
+
+     
+           <img src="img/photo1.jpg" width="100%"/>
+            <p style="font-size:16px;line-height:1.3;"></small><small>PHOTO. Un camion passe devant Petroplus à Cressier (Neuchâtel) au petit matin. En mai 2012, c’est le négociant suisse Vitol qui a racheté avec AtlasInvest cette raffinerie de pétrole. (Photo Reuters)</small></small></p>
+ <hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+<br>
+        <p><big>
+
+<span style="text-transform:uppercase">ON LES APPELLE COMMUNÉMENT «TRADERS».</span> Ces groupes préfèrent le terme de «négociants». Peu connues du grand public, ces sociétés qui œuvrent dans le commerce des matières premières, dont beaucoup sont basées en Suisse - Louis Dreyfus, Trafigura, Vitol, Glencore ou Gunvor - sont des géants économiques du secteur. Elles ont connu ces 15 dernières années leur âge d’or, leur «supercycle».
+            <br>
+            <br> Mais alors qu’elles jouaient jusqu’à présent un rôle purement d’acheteurs et de revendeurs, en profitant du jeu de l’offre et de la demande, elles subissent aujourd’hui la crise, en raison de la baisse de la demande chinoise. Pour réagir, elles ont choisi depuis plusieurs années d’investir massivement dans les infrastructures, dans le «physique».
+            <br>
+            <br>Quand les traders ne sont plus (seulement) des traders devant leurs écrans, mais achètent aussi des raffineries, des mines et des réseaux de stations-service: nos explications en 4 points.
+
+        </p>
+        </big>
+
+
+        <p><a style="color:#a50000;background-color:#fff;text-decoration:underline" href="http://t.co/qaUNshaKqZ" target="_blank">&nbsp;Lire notre enquête: «La fête est finie pour le secteur suisse des matières premières»&nbsp;</a>
+        </p>
+        </big>
+        </p>
+
+
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col span12">
+        <br>
+        <hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+        <br>
+        <h1><small><span style="padding:2px 10px 3px 10px;color:#fff;background-color:#940026;"><small>1.</small></span>&nbsp;Le métier historique des négociants</small>
+                </h1>
+        <br>
+        <p>
+            Dans les matières premières, le métier de négociant ou trader est avant tout un métier d’écrans, un métier virtuel. Historiquement, à quelques exceptions près (dont les lieux de stockage), les négociants ne possédaient pas les infrastructures physiques (les plateformes ou les mines, les tankers ou les vraquiers pour le transport, les lieux de stockage) nécessaires à la production et à l’acheminement de ces matières premières.
+            <br>
+            <br>
+            <b>Gérer la logistique</b>
+            <br>
+            <br> Assis dans de confortables fauteuils devant leurs ordinateurs, les traders achètent en quelques clics des ressources naturelles dans des pays où l’offre est abondante pour les revendre quelques dizaines de milliers de kilomètres plus loin où la demande s’en fait ressentir. Ils stockent également la ressource si nécessaire pour profiter des fluctuations du marché. Dans le jargon, on parle d’arbitrage.
+            <br>
+            <br> Le quotidien d’un trader, c’est donc avant tout résoudre des problèmes logistiques. Ce métier est d’une très grande complexité dans les stratégies utilisées, à la croisée entre logistique et finance. Exemple avec le «cotango»: vous achetez, vous stockez, vous hedgez (mot qui désigne le fait de couvrir les fluctuations de prix par des contrats à terme), vous «roulez le hedge» de mois en mois: le prix qui augmente permet de compenser les frais de stockage.
+        </p>
+        <p>Voici ci-dessous, très schématisé, le cycle de production et de distribution classique des matières premières. En <span style="background-color:#dce5f1;color:#555;padding-left:5px;padding-right:5px"> bleu</span>, les informations sur l’activité physique de production et en<span style="background-color:#f6cebf;color:#555;padding-left:5px;padding-right:5px"> rouge</span>, là où les traders interviennent.
+
+        </p>
+        <br>
+        <br>
+        <p>
+            <div id="traders1">
+            </div>
+        </p>
+
+        <br>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col span12">
+        <br>
+        <hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+        <br>
+        <h1><small><span style="padding:2px 10px 3px 10px;color:#fff;background-color:#940026;"><small>2.</small></span> La fin de l'âge d'or et les raisons de la crise</small></h1>
+        <p>
+            <br> Profitant de la hausse continue de la demande, la taille des groupes actifs dans le négoce de matières premières a explosé ces quinze dernières années. C’est le «supercycle», cet âge d’or comme on l’appelle dans le jargon, en passe de connaître un coup d’arrêt avec une baisse de la demande chinoise et une hausse de la réglementation au niveau mondial.
+            <br>
+            <br>
+            <b>La fin du «supercycle»</b>
+            <br>
+            <br> Les prix des matières premières baissent, les salaires se tassent, des sociétés disparaissent. Certains géants du secteur souffrent. Et les conséquences pour la Suisse pourraient être lourdes. Le négoce des matières premières y pèse 3,5% du PIB, et Genève en tire 22,5% des revenus fiscaux sur les bénéfices et le capital.
+            <br>
+            <br>En cause:
+            <br>
+
+
+            <p><span style="font-size:25px;color:#940026">&#10145;</span><b> LA CRISE DU FINANCEMENT.</b> Pour les traders, il devient très compliqué de trouver des capitaux pour leur survie. BNP Paribas, qui finançait le secteur depuis des décennies, a brutalement freiné son activité ces derniers mois. En cause, l’amende américaine de 8,9 milliards de dollars infligée à la banque française pour des contournements d’embargo. Résultats, la banque aurait réduit de deux tiers son activité. Plus généralement, les banques sont aussi devenues plus méfiantes envers leurs clients traders. </p>
+            <p><span style="font-size:25px;color:#940026">&#10145;</span><b> DES FAILLITES EN SÉRIE. </b>Dans le monde secret des matières premières, on ne parle pas volontiers de ceux qui vont mal. Mais certaines sociétés n’ont pas survécu aux turbulences des derniers mois. La crise touche désormais des géants comme Gunvor, qui, selon plusieurs sources, a réduit ses effectifs genevois.
+            </p>
+            <p><span style="font-size:25px;color:#940026">&#10145;</span><b> DES PRIX BAS.</b> Cet automne, les prix du fret maritime, censés refléter la santé du secteur, ont atteint leur plus bas niveau depuis 35 ans. Pétrole, minerai de fer, métaux, céréales, tous les marchés ou presque baissent. La faute au violent ralentissement de la Chine et à la crise économique en Europe. Dans le pétrole, la structure de prix qui enrichissait les négociants dans les années 2000 a disparu.
+                <br>
+                <br>Plus récemment, le prix du brut est resté très haut mais très stable, ce qui a mis fin à cette période d’argent facile. Et depuis quelques semaines, il chute. Ceux qui avaient parié sur sa remontée ont encaissé de lourdes pertes.</p>
+            <p><span style="font-size:25px;color:#940026">&#10145;</span><b> UNE SUISSE MOINS ATTRACTIVE.</b> Les coûts élevés et la force du franc suisse sont des handicaps. Pour les sociétés russes ou ukrainiennes, qui avaient alimenté la croissance de la place genevoise dans les années 2000, la situation est bien pire: l’effondrement de leurs monnaies rend Genève deux fois plus chère qu’il y a six mois. Aux coûts s’ajoute l’inflation réglementaire qui frappe la Suisse, la réforme de l’imposition des entreprises, et les projets de lois sur les matières premières en préparation: transparence des paiements aux Etats, produits dérivés, responsabilité sociale et environnementale. </p>
+
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col span12">
+        <br>
+        <hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+        <br>
+        <h1><small><span style="padding:2px 10px 3px 10px;color:#fff;background-color:#940026;"><small>3.</small></span>&nbsp;La diversification obligatoire dans le «physique»</small></h1>
+        <br>
+        <p>Conscients de la fin de cet âge d’or, ces négociants ont compris depuis plusieurs années l’intérêt d’investir dans les infrastructures, dans le physique. «Ceux qui survivront, ce sont ceux qui ont profité de ces dix dernières années pour passer de l’écran au physique», prédit le vétéran de l’industrie pétrolière Jean-Claude Gandur.
+        </p>
+        <p>
+            Très concrètement, ces entreprises se mettent à investir dans des raffineries (comme celle de Cressier), des mines et des réseaux de stations-service.
+            <p>
+                <p>
+                    L’infographie ci-dessous permet d'avoir un aperçu de cette stratégie de diversification des grands du secteur, et de voir dans quels segments ils sont actifs. En <span style="background-color:#dce5f1;color:#555;padding-left:5px;padding-right:5px"> bleu</span>, voici les informations liées à l'activité physique et en <span style="background-color:#f6cebf;color:#555;padding-left:5px;padding-right:5px"> rouge</span> les activités de pur trading.
+
+                </p>
+
+    </div>
+</div>
+<hr style="border:1px dashed #f2f2f2">
+
+
+
+</big>
+
+<div id="graphic" style="margin-left:50px;margin-right:10%">
+    <table id="table1">
+
+        <thead>
+            <tr class="header" style="background-color:#fff;border-bottom:1px solid #666;">
+                <th>
+                    <br>
+                    <br>
+                </th>
+                <th style="vertical-align:middle;text-align:left;font-style:normal">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Maïs</span>
+                    <br>
+                    <br><img src="img/corn.png" width="30">
+                </th>
+                <th style="vertical-align:middle;text-align:left;font-style:bold;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Blé</span>
+                    <br>
+                    <br><img src="img/ble.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Oléag.</span>
+                    <br>
+                    <br><img src="img/olea.png" opacity="0.5" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Coton</span>
+                    <br>
+                    <br><img src="img/cotton.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Sucre</span>
+                    <br>
+                    <br><img src="img/sucre.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Cacao</span>
+                    <br>
+                    <br><img src="img/cacao.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Café</span>
+                    <br>
+                    <br><img src="img/coffee.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:center;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Métaux</span>
+                    <br>
+                    <br><img src="img/meal.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Fer</span>
+                    <br>
+                    <br><img src="img/fer.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:center;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Pétrole</span>
+                    <br>
+                    <br><img src="img/petrole.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:center;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Charb.</span>
+                    <br>
+                    <br><img src="img/charbon.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:left;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Gaz</span>
+                    <br>
+                    <br><img src="img/gaz.png" width="30">
+                </th>
+                <th style="vertical-align:middle;font-style:bold;text-align:center;">
+                    <br>
+                    <br>
+                    <br>
+                    <br><span style="background-color:#000;color:#fff;padding:3px 5px 3px 5px;font-size:13px;">Elect.</span>
+                    <br>
+                    <br><img src="img/elec.png" width="30">
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- UNE 1 -->
+
+            <tr class="alabama">
+                <td style="padding-top:15px;border-top:0px solid black;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;<span>LOUIS DREYFUS</big>
+                    </span> <small> <br>21'000 employés | CA 2013 : 64 mia $<br><br></small>
+                    </big>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+
+            <tr class="alabama">
+
+                <td class="state">Upstream <i>(production / explor./ R&D)</i>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Midstream <i>(transport / stockage)</i>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream <i>(distribution)</i>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+            <tr class="alabama">
+                <td style="padding-top:25px;border-top:0px;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;GUNVOR</big>
+                    </span> <small> <br>1'600 employés | CA 2013 : 91 mia $<br><br></small>
+                    </big>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+            <tr class="alabama">
+                <td class="state">Upstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+
+            <tr class="alabama">
+                <td class="state">Midstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr class="alabama">
+                <td style="padding-top:25px;border-top:0px;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;MERCURIA</big>
+                    </span> <small> <br>1'000 employés | CA 2013 : 112 mia $<br><br></small>
+                    </big>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr class="alabama">
+                <td class="state">Upstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Midstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+            </tr>
+
+
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr class="alabama">
+                <td style="padding-top:25px;border-top:0px;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;GLENCORE</big>
+                    </span> <small> <br>200'000 employés | CA 2013 : 233 mia $<br><br></small>
+                    </big>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+
+
+
+            <tr class="alabama">
+                <td class="state">Upstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Midstream</td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+            <!-- UNE 3 -->
+
+
+            <tr class="alabama">
+                <td style="padding-top:25px;border-top:0px;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;TRAFIGURA</big> </big>
+                    </span>
+                    <br>8'700 employés | CA 2013 : 133 mia $
+                    <br>
+                    <br>
+
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+            <tr class="alabama">
+                <td class="state">Upstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+
+            <tr class="alabama">
+                <td class="state">Midstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+
+            <!-- UNE 3 -->
+
+
+
+            <!-- UNE 3 -->
+
+
+
+            <!-- UNE 3 -->
+
+
+            <tr class="alabama">
+                <td style="padding-top:25px;border-top:0px;color:#333;font-style:normal;"><big><big><i class="fa fa-chevron-circle-right"></i>&nbsp;&nbsp;VITOL</big>
+                    </span> <small> <br>5'400 employés | CA 2013 : 307 mia $<br><br></small>
+
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+                <td>
+                    <center></center>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr class="alabama">
+                <td class="state">Upstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Midstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state">Downstream</td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+            </tr>
+
+            <tr class="alabama">
+                <td class="state"><b>Trading</b>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="rien">
+                    <center></center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+                <td class="above-avg1">
+                    <center><span style="color:#fff">&#10004;</span>
+                    </center>
+                </td>
+            </tr>
+
+
+            <tr class="alabama">
+
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+
+</div>
+<br>
+<hr style="border:1px dashed #f2f2f2">
+<br>
+<div class="row">
+    <div class="col span12">
+        <br>
+        <br>
+        <p>On constate que <b>Louis Dreyfus</b> - dont l’un des slogans est «De la ferme à la fourchette» - est très actif dans toutes les activités physiques liées aux matières premières qu’ils négocient. Avec ses trois fameux concurrents – Archer Daniels Midland, Bunge et Cargill – Louis Dreyfus forme le groupe «ABCD», connu pour dominer le marché mondial des produits agricoles. Ces dernières années, ces géants ont connu une période difficile en raison de la chute générale des cours des céréales (notamment à cause de moissons abondantes).
+        </p>
+
+        <p><b>Glencore</b> est sans surprise le géant le plus diversifié. En reprenant la société minière Xstrata en 2012, le groupe basé à Baar (dans le canton de Zoug) a considérablement élargi sa palette d’activités. Il est l’un des exemples les plus emblématiques de cette transition du métier de négociant.
+            <p>
+
+                <p><b>Les autres sociétés</b> - Mercuria mis à part - se concentrent dans les matières premières énergétiques. Cela illustre l’une des grandes distinctions dans l’univers des matières premières, historiquement divisées entre les «soft commodities» (maïs, blé, coton, sucre, etc.) et le secteur énergétique. Cette infographie permet également de constater l’omniprésence des sociétés basées en Suisse dans le domaine du pétrole. Et permet de comprendre comment un tiers des achats/ventes de produits pétroliers sont réalisés depuis l’Arc lémanique.
+                </p>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+    <div class="col span12">
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <h1><small><span style="padding:2px 10px 3px 10px;color:#fff;background-color:#940026;"><small><small>4.</small></small></span>&nbsp;La course aux investissements</small></h1>
+        <br>
+        <p>Dans cette diversification de l’écran vers le physique, les négociants n’hésitent plus à consentir de lourds investissements dans les infrastructures. Objectif: huiler encore davantage la mécanique complexe de l’acheminement de matières premières du producteur au consommateur et profiter de la valeur ajoutée tout au long de la chaîne. </p>
+        <p>Voici, dans cette carte interactive, une sélection non exhaustive des principaux investissements «dans le physique» réalisés cette année. Le grand Monopoly des matières premières a commencé...
+        </p>
+
+    </div>
+</div>
+<hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+<br>
+<iframe src="//s3.amazonaws.com/cdn.knightlab.com/libs/storymapjs/latest/embed/index.html?url=https://9bd25b2b3302264d7c1b7ff72feb33bb87512c41.googledrive.com/host/0B4CQxp9-JLptNVdxN29ZUWJ3OFk/published.json" frameborder="0" width="100%" height="800" style="margin-left:0px;margin-right:0px"></iframe>
+<br>
+<br>
+<hr style="margin-left:-2px;border:1px dotted #f2f2f2">
+
+
+<br>
+<br>
+<div style="margin-left:10%">
+    <big><big><b>Crédits</b></big></big>
+
+    <small><p>
+                    Textes et enquête: Valère Gogniat et Sylvain Besson<br>
+                    Réalisation technique: Jean Abbiateci<br>
+ Sources: Le Temps, Craig Pirrong<br>
+
+
+                    Icônes: <a href="http://thenounproject.com/">The Noun Project</a><br>
+                    Code: Data Le Temps, <a href="http://www.github.com/nprapps" target="_blank">NPR, </a> <a href="http://storymap.knightlab.com/" target="_blank"> StorymapJS</a></a> & <a href="http://www.jqueryscript.net/demo/Simple-jQuery-Plugin-To-Freeze-Header-Row-In-Table-freezeheader/" target="_blank"> Freezeheader</a>.<br><br><br></small>
+
+    </p>
+</div>
+
+</div>
+<!--/col-->
+</div>
+
+
+<script src="js/lib/jquery.js" type="text/javascript"></script>
+
+<script src="js/lib/pym.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var pymParent = new pym.Parent('traders1', 'child1.html', {});
+</script>
+
+
+<script src="http://www.jqueryscript.net/demo/Simple-jQuery-Plugin-To-Freeze-Header-Row-In-Table-freezeheader/js/jquery.freezeheader.js"></script>
+<script>
+$(document).ready(function() {
+    $("#table1").freezeHeader();
+})
+</script>
+
+
+
+<script src="js/share.min.js"></script>
+<script>
+new Share(".share-button", {
+    ui: {
+        flyout: "bottom left"
+    }
+})
+</script>
+</body>
+</html>
